@@ -1,0 +1,17 @@
+Objects
+
+When you don't need any ordering, objects are an excellent choice.
+
+Insertion: O(1)
+Removal: O(1)
+Access: O(1)
+Searching: O(n)
+
+Arrays
+
+Arrays are ordered lists
+
+Use arrays when: 
+1. you need order 
+2. you need fast access/insertion/removal 
+
