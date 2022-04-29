@@ -1,4 +1,4 @@
-Objects
+1. Objects
 
 When you don't need any ordering, objects are an excellent choice.
 
@@ -7,11 +7,13 @@ Removal: O(1)
 Access: O(1)
 Searching: O(n)
 
-Arrays
+2. Arrays
 
 Arrays are ordered lists
 
 Use arrays when: 
 1. you need order 
 2. you need fast access/insertion/removal 
-
+  a. insertion/removing at end (push, pop) => O(1)
+  b. insertion/removing at beginning (unshift, shift) => O(n)
+  c. forEach, map, filter, reduce, etc. => O(n)
