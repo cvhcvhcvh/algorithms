@@ -20,6 +20,9 @@ function isAnagram(str1, str2) {
       anagram[char] -= 1
     }
   }
+  // if (!Object.values(anagram).reduce((a, b) => a + b)) {
+  //   return true;
+  // }
   return true;
   
 }
