@@ -2,7 +2,6 @@
 
 function isAnagram(str1, str2) {
   if (str1.length !== str2.length) return false;
-  if (str1 === "" || str2 === "") return true;
   const anagram = {};
 
   for (let i = 0; i < str1.length; i++) {
@@ -29,4 +28,4 @@ function isAnagram(str1, str2) {
 
 console.log(isAnagram("iceman", "cinema"));
 console.log(isAnagram("iceman", "franks"));
-console.log(isAnagram("", "yo"));
+console.log(isAnagram("", ""));
