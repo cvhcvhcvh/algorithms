@@ -17,27 +17,41 @@
          6. keep incrementing j until i no longer equals j
          7. when j equals something else, count++ again
          8. bring i = j
+         OR
+         1.  set empty array
+         2.  loop through to grab each char of input arr
+         3.  check to 
 
 */
 
 function countUniqueValues(arr) {
-  if (arr.length === 0) return 0;
+  // if (arr.length === 0) return 0;
 
-  let count = 0;
-  let i = 0;
-  let j = 0;
+  // let count = 0;
+  // let i = 0;
+  // let j = 0;
 
-  while (j <= arr.length) { // j = 6, false
-    if (arr[i] === arr[j]){ // true
-      j++ // j = 7
-    } else {
-      count++ // count = 2
-      i = j // i = 6, j = 6
+  // while (j <= arr.length) { // j = 6, false
+  //   if (arr[i] === arr[j]){ // true
+  //     j++ // j = 7
+  //   } else {
+  //     count++ // count = 2
+  //     i = j // i = 6, j = 6
+  //   }
+  // }
+  // return count
+
+  var i = 0;
+  for (var j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j];
     }
   }
-  return count
+  return i + 1;
 }
-                          //                      i   j
+//                      i   j
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
-console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
+console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13])); // 7
+console.log(countUniqueValues([1, 2, 3, 4, 5, 6, 7])); // 7
 console.log(countUniqueValues([-2, -1, -1, 0, 1]));
